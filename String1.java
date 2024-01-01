@@ -13,7 +13,8 @@ class abc
 
         for(i=0;i<name.length();i++)
         {
-            
+            char ch=name.charAt(i);
+            //On Hold
         }
     }
 }
