@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 class testing {
     // The goal is to make a program to print all the twin primes. between a given
-    // range. that's for now. I am still learning,
+    // range. that's for now. I am still learning,: 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the starting range: ");
@@ -38,5 +38,7 @@ class testing {
         else
             return false;
     }
+
+    
 }
 // use code assistants, like github copilot or Cody but carefully.
