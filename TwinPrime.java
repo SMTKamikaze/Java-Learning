@@ -11,24 +11,36 @@ class testing {
         int num2 = sc.nextInt();
 
         int i = 0;
+        int d=0;
         i = num1;
         for (i = num1; i < num2; i++) {
             if (isTwinPrime(i, i + 2))
-                System.out.println(i + "--" + (i + 2));
+                {
+                    System.out.println(i + "--" + (i + 2));
+                    d++;
+                }
         }
-
+        System.out.println("Total number of twin primes: "+d);
     }
 
     static boolean isPrime(int n) {
-        int c = 0;
-        for (int i = 1; i < n; i++) {
-            if (n % i == 0)
-                c++;
-        }
-        if (c == 1)
-            return true;
-        else
+         if (n <= 1) {
             return false;
+        }
+        if (n <= 3) {
+            return true;
+        }
+        if (n % 2 == 0 || n % 3 == 0) {
+            return false;
+        }
+
+        // Check for prime using 6k +/- 1 optimization
+        for (int i = 5; i * i <= n; i += 6) {
+            if (n % i == 0 || n % (i + 2) == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 
     static boolean isTwinPrime(int n, int m) {
@@ -41,4 +53,3 @@ class testing {
 
     
 }
-// use code assistants, like github copilot or Cody but carefully.
