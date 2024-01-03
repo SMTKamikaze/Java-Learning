@@ -23,33 +23,23 @@ class testing {
         System.out.println("Total number of twin primes: "+d);
     }
 
-    static boolean isPrime(int n) {
-         if (n <= 1) {
+    static boolean isTwinPrime(int n , int m) {
+         if (n <= 1 && m <= 1) {
             return false;
         }
-        if (n <= 3) {
+        if (n <= 3 && m <= 3) {
             return true;
         }
-        if (n % 2 == 0 || n % 3 == 0) {
+        if (n % 2 == 0 || n % 3 == 0 || m % 2 == 0 || m % 3 == 0) {
             return false;
         }
-
-        // Check for prime using 6k +/- 1 optimization
+ 
         for (int i = 5; i * i <= n; i += 6) {
-            if (n % i == 0 || n % (i + 2) == 0) {
+            if (n % i == 0 || n % (i + 2) == 0 || m % i == 0 || m % (i + 2) == 0) {
                 return false;
             }
         }
         return true;
     }
 
-    static boolean isTwinPrime(int n, int m) {
-
-        if (isPrime(n) && isPrime(m))
-            return true;
-        else
-            return false;
-    }
-
-    
 }
