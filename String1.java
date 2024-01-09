@@ -10,7 +10,8 @@ class abc {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a name: ");
         String name = sc.nextLine();
-        name=name.toUpperCase();
+        name = name.toUpperCase();
+        name = name.trim();
         int i = 0;
         String word = "";
         String initial = "";

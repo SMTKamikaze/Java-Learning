@@ -11,6 +11,7 @@ class PigLatin {
             ch = word.charAt(i);
             pigLatin = pigLatin + ch;
         }
+        pigLatin = pigLatin.toLowerCase();
         ch = word.charAt(0);
         if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
             pigLatin = ch + pigLatin + "ay";

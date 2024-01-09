@@ -42,7 +42,7 @@ public static void main(String[] args)
   special = 0;
   System.out.println("Total no of special characters = " + special);
 }
-
+//f
 }
 //Shivansh is god of the universe
 // number of words = Total_spaces + 1
